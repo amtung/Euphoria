@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>696615970635-irrr7mq4kbo5aherjgk8pe9q4gq4s9im.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.696615970635-irrr7mq4kbo5aherjgk8pe9q4gq4s9im</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBfajjRAFLxdS6sXJ8wxqZ80j2c9Af5tXo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>696615970635</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>tung.annie.c4q.Euphoria</string>
+	<key>PROJECT_ID</key>
+	<string>euphoria-5e8a3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>euphoria-5e8a3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:696615970635:ios:8c71b4c024da9f07</string>
+	<key>DATABASE_URL</key>
+	<string>https://euphoria-5e8a3.firebaseio.com</string>
+</dict>
+</plist>
