@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -63,54 +62,10 @@
                     <view key="view" contentMode="scaleToFill" id="hQk-S4-Taz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m8t-Ir-dGa">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="voT-vj-FNd"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPw-Eg-EtP">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="wDC-5z-zS4"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjZ-ii-d6a">
-                                <state key="normal" title="Register"/>
-                                <connections>
-                                    <action selector="registerButtonPressed:" destination="lD7-mr-R3a" eventType="touchUpInside" id="hdL-Fd-ImL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXB-Jk-gg0">
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="lD7-mr-R3a" eventType="touchUpInside" id="5vy-8G-D7h"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="FXB-Jk-gg0" secondAttribute="trailing" constant="88" id="1l3-CX-klI"/>
-                            <constraint firstItem="m8t-Ir-dGa" firstAttribute="centerX" secondItem="hQk-S4-Taz" secondAttribute="centerX" id="59D-C8-ZsH"/>
-                            <constraint firstItem="KjZ-ii-d6a" firstAttribute="top" secondItem="vPw-Eg-EtP" secondAttribute="bottom" constant="20" id="BQr-AN-Uyv"/>
-                            <constraint firstItem="FXB-Jk-gg0" firstAttribute="leading" secondItem="KjZ-ii-d6a" secondAttribute="trailing" constant="75" id="E23-gB-3Dc"/>
-                            <constraint firstItem="vPw-Eg-EtP" firstAttribute="centerX" secondItem="m8t-Ir-dGa" secondAttribute="centerX" id="Izg-Rr-fUC"/>
-                            <constraint firstItem="m8t-Ir-dGa" firstAttribute="centerY" secondItem="hQk-S4-Taz" secondAttribute="centerY" id="R15-LA-lqB"/>
-                            <constraint firstItem="FXB-Jk-gg0" firstAttribute="top" secondItem="vPw-Eg-EtP" secondAttribute="bottom" constant="20" id="Vv2-7t-ga2"/>
-                            <constraint firstItem="vPw-Eg-EtP" firstAttribute="top" secondItem="m8t-Ir-dGa" secondAttribute="bottom" constant="22" id="jlk-OQ-nCo"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="UKb-ma-ZEk"/>
                     <connections>
-                        <outlet property="emailField" destination="m8t-Ir-dGa" id="7mm-Jb-qek"/>
-                        <outlet property="loginButton" destination="FXB-Jk-gg0" id="QBY-eF-WQm"/>
-                        <outlet property="passwordField" destination="vPw-Eg-EtP" id="OSl-wj-mqX"/>
-                        <outlet property="registerButton" destination="KjZ-ii-d6a" id="X0G-B6-9Xw"/>
                         <segue destination="5U8-uA-sju" kind="push" id="BDQ-KI-pKY"/>
                     </connections>
                 </viewController>

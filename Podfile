@@ -10,6 +10,7 @@ target 'Euphoria' do
 	pod 'Firebase/Auth'
 	pod 'FBSDKCoreKit'
 	pod 'FBSDKLoginKit'
-	pod 'FBSDKShareKit' 
+	pod 'FBSDKShareKit'
+	pod 'SnapKit', '~> 3.0' 
 
 end
