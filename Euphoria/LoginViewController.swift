@@ -24,6 +24,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         addGestureToDismissKeyboard()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        addGradientTouch()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         print("Almost out of memory!")
@@ -34,6 +38,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var emailField: UITextField = {
         let field = UITextField()
         field.placeholder = " Email"
+        field.layer.cornerRadius = 5
         field.backgroundColor = UIColor.gray.withAlphaComponent(0.2)
         return field
     }()
@@ -41,15 +46,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var passwordField: UITextField = {
         let field = UITextField()
         field.placeholder = " Password"
+        field.layer.cornerRadius = 5
         field.isSecureTextEntry = true
         field.backgroundColor = UIColor.gray.withAlphaComponent(0.2)
         return field
     }()
     
     var loginButton: UIButton = {
-        let button = UIButton(type: UIButtonType.system)
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 25))
         button.setTitle("LOGIN", for: .normal)
-        button.backgroundColor = UIColor.blue.withAlphaComponent(0.2)
         button.layer.cornerRadius = 12
         button.clipsToBounds = true
         button.addTarget(nil, action: #selector(loginButtonPressed), for: .touchUpInside)
@@ -176,6 +181,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return false
         }
         return true
+    }
+    
+    func addGradientTouch(){
+        let gradient: CAGradientLayer = CAGradientLayer()
+        let cyan = UIColor(red:0.54, green:1.00, blue:0.99, alpha:3.0).cgColor
+        let purple = UIColor(red:0.94, green:0.20, blue:0.85, alpha:1.0).cgColor
+        gradient.colors = [cyan, purple]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradient.frame = self.loginButton.bounds
+        self.loginButton.layer.insertSublayer(gradient, at: 0)
     }
     
     /*
