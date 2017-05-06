@@ -16,12 +16,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = .white
         setupHierarchy()
         configureConstraints()
         emailField.delegate = self
         passwordField.delegate = self
         addGestureToDismissKeyboard()
+        definesPresentationContext = true
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -14,10 +14,66 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()
         
+       /* self.window = UIWindow(frame: UIScreen.main.bounds)
+//        let rootVC = EventsTableViewController()
+        let navigationController = UINavigationController(rootViewController: EventsTableViewController())
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()*/
+        
+       /* self.window = UIWindow(frame: UIScreen.main.bounds)
+        let tabBarController = UITabBarController()
+        
+        var initialNavController = UINavigationController()
+        initialNavController.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.contacts, tag: 0)
+//        var eventsVC = EventsTableViewController(nibName: nil, bundle: nil)
+        let navViewController = UINavigationController(rootViewController: initialNavController)
+        tabBarController.viewControllers?.append(navViewController)
+//        initialNavController.viewControllers = [eventsVC]
+        
+        var secondNavController = UINavigationController()
+        secondNavController.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.bookmarks, tag: 1)
+//        var musicVC = MusicViewController(nibName: nil, bundle: nil)
+//        secondNavController.viewControllers = [musicVC]
+        let navViewControllerOne = UINavigationController(rootViewController: secondNavController)
+        tabBarController.viewControllers?.append(navViewControllerOne)
+        
+        tabBarController.viewControllers = [initialNavController, secondNavController]
+        tabBarController.selectedIndex = 0
+        
+        self.window?.rootViewController = tabBarController
+        self.window?.makeKeyAndVisible()*/
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let tabBarController = UITabBarController()
+        
+        let eventsVC = EventsViewController(nibName: nil, bundle: nil)
+        let eventsNavController = UINavigationController(rootViewController: eventsVC)
+        
+        let profileVC = MusicViewController(nibName: nil, bundle: nil)
+        let homeVC = HomeViewController(nibName: nil, bundle: nil)
+        let controllers = [eventsNavController,homeVC,profileVC]
+        tabBarController.viewControllers = controllers
+        self.window?.rootViewController = tabBarController
+        self.window?.makeKeyAndVisible()
+        /*
+        let firstImage = UIImage(named: "pie bar icon")
+        let secondImage = UIImage(named: "pizza bar icon")
+        myVC1.tabBarItem = UITabBarItem(
+            title: "Pie",
+            image: firstImage,
+            tag: 1)
+        myVC2.tabBarItem = UITabBarItem(
+            title: "Pizza",
+            image: secondImage,
+            tag:2)*/
+        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.bookmarks, tag: 0)
+        eventsVC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.contacts, tag: 1)
+        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.featured, tag: 2)
+        tabBarController.selectedIndex = 0
+ 
         return true
     }
 

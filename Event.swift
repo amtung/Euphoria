@@ -103,7 +103,7 @@ class Event {
                         
                         let eventObject = Event(id: ID, artistEventID: artistEventID, title: title, formattedDatetime: formattedDatetime, formattedLocation: formattedLocation, ticketUrl: ticketUrl, ticketStatus: ticketStatus, onSaleDatetime: onSaleDatetime, facebookRSVPurl: facebookRSVPurl, description: description, artistName: artistName, thumbnailURL: thumbnailURL, fullImageURL: fullImageURL, facebookTourPage: facebookTourPage, facebookPageURL: facebookPageURL, website: website, venueName: venueName, venueCity: venueCity, venueRegion: venueRegion, venueCountry: venueCountry)
                         arrOfArtists.append(eventObject)
-                        dump(arrOfArtists)
+//                        dump(arrOfArtists)
                     }
                 }
             }
